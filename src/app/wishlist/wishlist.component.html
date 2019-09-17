@@ -1,0 +1,85 @@
+<h3  
+class="display-4 open-sans" 
+style="margin-bottom: 50px;">
+Wishlist
+  <i 
+  class="fas fa-heart">
+  </i>
+</h3>
+<hr/>
+<div
+*ngIf="!myWishlist.length"
+class="d-flex justify-content-center">
+<h5>
+    Your wishlist is empty
+</h5>
+</div>
+<table 
+*ngIf="myWishlist.length"
+class="table table-hover">
+    <thead>
+    <tr>
+        <th 
+        scope="col">
+        </th>
+        <th 
+        scope="col">
+        Device
+        </th>
+        <th 
+        scope="col">
+        </th> 
+        <th 
+        scope="col">
+        Manufacturer
+        </th>
+        <th 
+        scope="col">
+        Description
+        </th>
+        <th 
+        scope="col">
+        Price
+        </th>
+        <th
+        scope="col">
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr       
+      *ngFor="let item of items">
+        <th 
+        scope="row">
+            <a 
+            (click)="remove(item.product.id)">
+                <i 
+                class="fas fa-trash-alt">
+                </i>
+            </a>
+        </th>
+        <td>
+            {{item.product.name}}
+        </td>
+        <td>
+            <img 
+            src="{{item.product.photo}}" 
+            width="50" 
+            class="img-thumbnail img"/>
+        </td> 
+        <td>{{item.product.manufacturer}}</td>
+        <td>{{item.product.description}}</td>
+        <td>{{item.product.price | currency }}</td>
+      <td>
+        <a 
+        [routerLink]="['/cart', {id:item.product.id}]" 
+        class="btn btn-light" 
+        title="add to cart">
+            <i 
+            class="fas fa-shopping-cart">
+            </i>
+        </a>
+      </td>
+        </tr>
+    </tbody>
+    </table>

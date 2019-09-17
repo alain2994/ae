@@ -1,0 +1,198 @@
+<!--<h3  
+class="display-4 open-sans" 
+style="margin-bottom: 50px;">
+Settings
+</h3>
+<hr/>
+<div 
+style="display: flex; flex-direction: row; margin-top: 75px; margin-left: -80px;">
+  <div 
+  class="col-sm-5" 
+  style="display: flex; flex-direction: column; align-items: center;">
+    <h5>
+      Profile
+    </h5>
+      <img 
+      style="border-radius: 50%; width: 25%; margin-top: 25px; border: 1px solid whitesmoke;" 
+      src="data:image/png;base64,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"/>
+      <h5
+      style="margin-top: 40px; color: #35afd5; font-weight: 900;">        
+        {{currentUser.firstName | titlecase}} {{currentUser.lastName | titlecase}} 
+      </h5>
+      <button 
+      class=" btn btn-info blue-btn" 
+      style="margin-top: 30px; width: 200px; height: 40px; color: white; font-size: 13px; ">
+        UPLOAD NEW AVATAR
+      </button>
+      <button 
+      class=" btn btn-outline-secondary" 
+      style="margin-top: 10px; width: 200px; height: 40px; font-size: 13px;">
+        DELETE
+      </button>
+    </div>
+  <form 
+  [formGroup]="registerForm" 
+  (ngSubmit)="onSubmit()">
+    <div 
+    style="width: 500px; border-left: 1px solid rgba(128, 128, 128, 0.329); padding-left: 100px;">
+      <!--
+      <div 
+      style="display: flex; flex-direction: row; justify-content: space-between;">
+        <h5 
+        style="font-weight: 900 !important;">
+        Basic Info
+      </h5>
+        <div>
+          <button 
+          class="btn btn-outline-info blue-outline" 
+          routerLink="/dashboard" 
+          style="width: 90px; height: 40px; color: grey; margin-right: 20px; font-size: 13px;">
+          CANCEL
+          </button>
+          <button 
+          class="btn btn-info blue-btn" 
+          style="width: 90px; height: 40px; color: white; font-size: 13px; ">
+          SAVE
+          </button>
+        </div>
+      </div>
+      <hr/>
+      <div 
+      style="display: flex; flex-direction: row;  margin-top: 40px;">
+      <div 
+      style="margin-bottom: 10px;"
+      class="form-group">
+          <label 
+          for="firstName">
+          FIRST NAME
+          </label>
+          <input 
+          type="text" 
+          formControlName="firstName" 
+          class="form-control" 
+          [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+          <div 
+          *ngIf="submitted && f.firstName.errors" 
+          class="invalid-feedback">
+              <div 
+              *ngIf="f.firstName.errors.required"  
+              style="color: #fc8787;">
+              First Name is required
+              </div>
+          </div>
+      </div>
+        <div 
+        style="width: 200px; margin-left: 90px;">
+        <label 
+        for="lastName">
+        LAST NAME
+        </label>
+          <input
+          type="text" 
+          formControlName="lastName" 
+          class="form-control" 
+          [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+        </div>
+      </div>
+      <div
+      style="margin-top: 30px;">
+        <label 
+        for="username">
+        USERNAME
+        </label>
+        <input 
+        type="text" 
+        formControlName="username" 
+        class="form-control" 
+        [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+      </div>  
+      
+      <div>
+        <h5 
+        style="font-weight: 900 !important; ">
+        Security
+      </h5>
+      </div>
+      <hr/>
+      <div 
+      style="display: flex; flex-direction: column;  margin-top: 40px;">
+        <div>
+          <span>
+            OLD PASSWORD
+          </span>
+          <input 
+          class="form-control"
+          type="password"/>
+        </div>
+      </div>
+      <div
+      style="margin-top: 30px;">
+        <label
+          for="password">
+          NEW PASSWORD
+        </label>
+        <input 
+          type="password" 
+          formControlName="password" 
+          class="form-control" 
+          [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+          <div 
+          *ngIf="submitted && f.password.errors" 
+          class="invalid-feedback">
+              <div 
+              *ngIf="f.password.errors.required"  
+              style="color: #fc8787;">
+              Password is required
+              </div>
+              <div 
+              *ngIf="f.password.errors.minlength" 
+              style="color: #fc8787;">
+              Password must be at least 6 characters
+              </div>
+          </div>
+      <div 
+      class="form-group"
+      style="margin-top: 30px; margin-bottom: 10px;">
+        <label
+        for="confirmPassword">
+          CONFIRM PASSWORD
+        </label>
+        <input 
+        type="password" 
+        formControlName="confirmPassword" 
+        class="form-control" 
+        [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+        <div 
+        *ngIf="submitted && f.confirmPassword.errors" 
+        class="invalid-feedback">
+          <div 
+          *ngIf="f.confirmPassword.errors.required" 
+          style="color: #fc8787;">
+          Confirm Password is required
+          </div>
+          <div 
+          *ngIf="f.confirmPassword.errors.mustMatch" 
+          style="color: #fc8787;">
+          Passwords must match
+          </div>
+        </div>
+    </div>
+      <div 
+      style="display: flex; justify-content: flex-end; margin-top: 30px;">
+          <button 
+          class="btn btn-outline-info blue-outline" 
+          routerLink="/dashboard" 
+          style="width: 90px; height: 40px; color: grey; margin-right: 20px; font-size: 13px;">
+          CANCEL
+          </button>
+          <button 
+          class="btn btn-info blue-btn"
+          (click)="onSubmit()" 
+          style="width: 90px; height: 40px; color: white; font-size: 13px; ">
+          SAVE
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>-->

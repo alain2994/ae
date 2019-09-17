@@ -1,0 +1,164 @@
+
+
+/* You can add global styles to this file, and also import other style files */
+.spinner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height:60px;
+    width:60px;
+    margin:0px auto;
+    -webkit-animation: rotation .6s infinite linear;
+    -moz-animation: rotation .6s infinite linear;
+    -o-animation: rotation .6s infinite linear;
+    animation: rotation .6s infinite linear;
+    border-left:6px solid  rgba(136, 136, 136, 0.15);
+    border-bottom:6px solid rgba(136, 136, 136, 0.15);
+    border-right:6px solid rgba(136, 136, 136, 0.15);
+    border-top:6px solid rgba(58, 58, 58, 0.8);
+    border-radius:100%;
+ }
+ 
+ @-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(359deg);}
+ }
+ @-moz-keyframes rotation {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(359deg);}
+ }
+ @-o-keyframes rotation {
+    from {-o-transform: rotate(0deg);}
+    to {-o-transform: rotate(359deg);}
+ }
+ @keyframes rotation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(359deg);}
+ }
+
+
+body
+{
+   font-family: 'Roboto', sans-serif;
+   color: white;
+}
+
+.monoton {
+   font-family: 'Monoton', cursive;
+}
+
+.poiret {
+   font-family: 'Poiret One', cursive;
+}
+
+.open-sans{
+   font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: whitesmoke;
+   color: black;
+   text-align: center;
+ }
+
+ .table {
+    text-align: center;
+ }
+
+ /* Dropdown Button */
+.dropbtn {
+   background-color: inherit;
+   color: white;
+   padding: 16px;
+   font-size: 16px;
+   border: none;
+ }
+ 
+ /* The container <div> - needed to position the dropdown content */
+ .dropdown {
+   position: relative;
+   display: inline-block;
+ }
+ 
+ /* Dropdown Content (Hidden by Default) */
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: black;
+   min-width: 100px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+ 
+ /* Links inside the dropdown */
+ .dropdown-content a {
+   color: white;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+ 
+ .deep-purple {
+   background-color: #563d7c;
+ }
+ .lighten-1 {
+   background-color: #7e57c2;
+ }
+ /* Change color of dropdown links on hover */
+ .dropdown-element:hover {
+    background: whitesmoke;
+    border-radius: 15%;
+ }
+ /* Show the dropdown menu on hover */
+ .dropdown:hover .dropdown-content {display: block;background-color: white; border-radius: 5%;}
+ 
+ /* Change the background color of the dropdown button when the dropdown content is shown */
+ .dropdown:hover .dropbtn {background-color: inherit;}
+
+ 
+.img:hover{
+   color: #424242; 
+ -webkit-transition: all .3s ease-in;
+ -moz-transition: all .3s ease-in;
+ -ms-transition: all .3s ease-in;
+ -o-transition: all .3s ease-in;
+ transition: all .3s ease-in;
+ opacity: 1;
+ transform: scale(5);
+}
+
+.activated {
+   border-bottom: 4px solid white !important;
+   opacity: 1 !important;
+   padding-bottom: 20px !important;
+   margin-bottom: -16px !important;
+}
+
+.nav-link {
+   color: white;
+}
+
+.nav-link:hover {
+   color: white;
+}
+
+.blue-outline:hover {
+   background-color: #35afd5;
+   color: white !important;
+}
+
+.blue-btn {
+   background-color: #35afd5;
+   border: #35afd5;
+}
+
+.blue-btn:hover {
+   background-color: #35b0d5cb;
+   border: #35b0d5cb;
+}

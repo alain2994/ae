@@ -1,0 +1,86 @@
+<h3 
+class="display-4 open-sans" 
+style="margin-bottom: 50px;">
+Product List 
+<i 
+class="fas fa-mobile-alt">
+</i>
+</h3>
+<!--
+<nav>
+    <div 
+    class="dropdown">
+        <button 
+        class="dropbtn text-dark"> 
+        Filter by 
+        <i 
+        class="fa fa-caret-down">
+        </i>
+        </button>
+        <div 
+        class="dropdown-content">
+            <a 
+            class="nav-link text-dark dropdown-element">
+            manufacturer
+            </a>
+            <a 
+            class="nav-link text-dark dropdown-element">
+            price
+            </a>
+        </div>
+    </div>
+</nav>
+-->
+<table  class="table table-hover">
+    <thead>
+    <tr>
+        <th scope="col">Device</th>
+        <th scope="col"></th>
+        <th scope="col">Manufacturer</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col"></th>
+    </tr>
+</thead>
+    <tbody>
+        <tr 
+        *ngFor="let product of products">
+            <th 
+            scope="row">
+  
+            {{product.name}}
+            </th>
+            <td> 
+                <img 
+                src="{{product.photo}}" 
+                style="width: 60px;" 
+                class="img-thumbnail img" 
+                id="myImg">
+            <td>{{product.manufacturer}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.price | currency }}</td>
+            <td>
+                <div 
+                class="btn-group" 
+                role="group">
+                    <a 
+                    [routerLink]="['/cart', {id:product.id}]" 
+                    class="btn btn-light" 
+                    title="add to cart">
+                        <i 
+                        class="fas fa-shopping-cart">
+                        </i>
+                    </a>
+                    <a 
+                    [routerLink]="['/wishlist', {id:product.id}]" 
+                    class="btn btn-light" 
+                    title="add to wishlist">
+                        <i 
+                        class="fas fa-heart">
+                        </i>
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

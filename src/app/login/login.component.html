@@ -1,0 +1,96 @@
+﻿<div 
+style = "position:relative; left:-80px; bottom:20px; top: 38px;">
+    <h1  
+    class="display-3 monoton">
+    Mobile
+    </h1>
+    <h1 
+    class="display-4 poiret" 
+    style="position: relative; left:182px; top:-38px;">
+    store
+    </h1>
+</div>
+<h1  
+class="col-sm-5 offset-sm-5" 
+style="margin-bottom: 20px; padding-left: 35px;">
+Login
+</h1>
+<form 
+[formGroup]="loginForm" 
+(ngSubmit)="onSubmit()" 
+class="col-sm-5 offset-sm-5" 
+style=" border-left:  solid grey; padding-left: 35px;">
+    <div 
+    class="form-group" >
+        <label 
+        for="username">
+        username:
+        </label>
+        <input 
+        type="text" 
+        formControlName="username" 
+        class="form-control" 
+        [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+        <div 
+        *ngIf="submitted && f.username.errors" 
+        class="invalid-feedback">
+            <div 
+            *ngIf="f.username.errors.required" 
+            style="color: #fc8787;">
+            Username is required
+            </div>
+        </div>
+    </div>
+    <div 
+    class="form-group">
+        <label 
+        for="password">
+        password:
+        </label>
+        <input 
+        type="password" 
+        formControlName="password" 
+        class="form-control" 
+        [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div 
+        *ngIf="submitted && f.password.errors" 
+        class="invalid-feedback">
+            <div 
+            *ngIf="f.password.errors.required" 
+            style="color: #fc8787;">
+            Password is required
+            </div>
+        </div>
+    </div>
+    <div 
+    class="form-group" >
+        <button 
+        [disabled]="loading" 
+        class="btn btn-light btn-lg" 
+        style="margin-left: 210px; margin-top: 25px;" >
+        login
+        </button>
+        <img 
+        *ngIf="loading" 
+        class="spinner" />
+         <hr 
+         class="my-4"/>
+          or 
+          <a 
+          routerLink="/register" 
+          class="btn btn-link text-dark" 
+          style="font-weight: bold;">
+          Sign up
+          </a>
+    </div>
+</form>
+
+<!-- 
+
+    <footer class="footer">
+        <hr class="my-2"/>
+        <div>
+            Follow us on 
+        </div>
+    </footer>
+-->

@@ -1,0 +1,98 @@
+﻿<h3  
+class="display-4 open-sans" 
+style="margin-bottom: 50px;">
+Highlights
+</h3>
+<div
+class="card-group"> 
+    <div 
+    *ngFor="let product of products">
+     
+                <div 
+                class="card" 
+                style="width: 15rem; height: 28rem; display: flex; align-content: center;">
+                <div 
+                class="card-body " >
+
+                        <h5 
+                        class="card-title text-dark">
+                        {{product.name}}
+                        </h5>
+                    <p 
+                    class="card-text text-dark">
+                    {{product.manufacturer}}
+                    </p>
+                    <p 
+                    class="card-text text-dark text-center">
+                    {{product.description}}
+                    </p>
+                    <img 
+                    class="rounded mx-auto  d-block" 
+                    src="{{product.photo}}" />
+                    <p 
+                    class="card-text text-dark text-center">
+                    {{product.price | currency}}
+                    </p>
+                    <div 
+                    class="row justify-content-center ">
+                            <div 
+                            class="btn-group" 
+                            role="group">
+                                <a 
+                                [routerLink]="['/cart', {id:product.id}]" 
+                                class="btn btn-light" 
+                                title="add to cart">
+                                    <i 
+                                    class="fas fa-shopping-cart">
+                                    </i>
+                                </a>
+                                <a 
+                                [routerLink]="['/wishlist', {id:product.id}]" 
+                                class="btn btn-light" 
+                                title="add to wishlist">
+                                    <i 
+                                    class="fas fa-heart">
+                                    </i>
+                                </a>
+                            </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+</div>
+
+
+<!--
+
+    <nav aria-label="Page navigation ">
+        <ul class="pagination ">
+            <li class="page-item ">
+                <a class="page-link text-dark" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li class="page-item active "><a class="page-link bg-dark" href="#">1</a></li>
+            <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
+            <li class="page-item">
+                <a class="page-link text-dark" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+-->
+
+<!--
+    
+    <h3>All registered users:</h3>
+    <ul>
+        <li *ngFor="let user of users">
+            {{user.username}} ({{user.firstName}} {{user.lastName}})
+            - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+        </li>
+    </ul>
+    
+-->
